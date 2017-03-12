@@ -1,0 +1,5 @@
+(define (pasical row col)
+  (cond ((= col 1) 1)
+        ((= row col) 1)
+        (else (+ (pasical (- row 1) (- col 1)) 
+                 (pasical (- row 1) col)))))
